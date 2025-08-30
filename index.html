@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 3rd Anniversary ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 2rem;
+            animation: fadeOut 3s ease-in-out forwards;
+            animation-delay: 3s;
+            z-index: 2;
+        }
+
+        .intro h1 {
+            animation: fadeIn 2s ease-in-out;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        .slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide {
+            display: none;
+            width: 90%;
+            max-width: 800px;
+            height: 70%;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            overflow-y: auto;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .active {
+            display: block;
+            animation: fadeSlide 1s ease-in-out;
+        }
+
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .music-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #fff;
+            color: #ee9ca7;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: none;
+            z-index: 3;
+        }
+
+        @media(max-width: 600px) {
+            .slide {
+                font-size: 1rem;
+                padding: 15px;
+                height: 75%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Intro Screen -->
+    <div class="intro">
+        <h1>💖 Happy 3rd Anniversary Samantha 💖</h1>
+    </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow">
+        <div class="slide active">
+            Uhmm, 3 years, we’ve come a long way sam, we really have, i get asked everyday how, why and when what they
+            don’t know is as i’m as shocked as them. I know i write this shii a lot for ya but i couldn’t give a shi i’d
+            keep writing them and reminding how special you are to me.
+        </div>
+        <div class="slide">
+            September 1st, <br><br>
+            I remember it like it was yesterday, seeing your face for the first time after the virtual flirting and all
+            that, the cloth you wore, the hair you were on just like it was yesterday. It’s really a special day in my
+            life no matter what happens in the future i don’t think I’m forgetting that day, the day i found the best
+            girlfriend ever.
+        </div>
+        <div class="slide">
+            Sam, <br><br>
+            I know you feel like you’re slowing me down and sometimes i feel like that but then i realize it’s just my
+            mind trying to find impediments to my sitch. I don’t regret asking you out, i don’t regret the long distance
+            we had, i don’t regret it samantha, i was never a deep love kinda guy it has always been let’s just go with
+            the vibe then it became different with you, i mean everything became different with you. I mean i got no one
+            else in mind as the year goes by we became deeper and deeper, we saw the happy phases we saw the sad phases
+            and we went through it, all of these is new to me like really new to me and happy it’s wii you baby girl
+        </div>
+        <div class="slide">
+            Flaws, <br><br>
+            I mean we all have our flaws i mean no one’s perfect, but what makes you perfect is that i try to embrace
+            the flaws of course it’d hurt sometimes still i don’t see it as a reason to stop loving you. I don’t wanna
+            mention them coz i don’t like calling someone out coz i don’t like what they did or act coz you might not
+            see anything wrong in it, i got used to you sending me snaps and your day and your outfit, then things have
+            been changing and i didn’t want it to bother me so i stopped viewing your snaps, you know how that’s how i
+            deal with it, same thing i noticed when i came to the salon and you told santos to come coz you weren’t sure
+            i was coming, all these made me feel do you actually love me or love the attention I’m gonna give, it’s calm
+            tho they’re just shii i felt and all
+        </div>
+        <div class="slide">
+            What makes you perfect <br><br>
+            My perfect girlfriend, I’ve always said there’s nothing i’d change about i don’t even normally want to
+            change anything about someone but still won’t change anything about you.
+            I’m glad we’re growing together i mean it’s 3 years we have to grow, i don’t wanna stop at 3 years i still
+            want to see where the future takes us, it’d sound cliche if i say i want to spend my lifetime with you but i
+            have i high hopes and also intrigued to see the what it has installed.
+            Happy 3 years anniversary my love, cheers to many many many more years my queen❤️
+        </div>
+    </div>
+
+    <!-- Music -->
+    <audio id="bg-music" autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-btn" id="playBtn">🎵 Play Music</button>
+
+    <script>
+        // Slideshow
+        let slides = document.querySelectorAll(".slide");
+        let current = 0;
+        setInterval(() => {
+            slides[current].classList.remove("active");
+            current = (current + 1) % slides.length;
+            slides[current].classList.add("active");
+        }, 10000); // 10 seconds per slide
+
+        // Music autoplay fix for mobile
+        const music = document.getElementById("bg-music");
+        const playBtn = document.getElementById("playBtn");
+
+        music.play().catch(() => {
+            playBtn.style.display = "block";
+        });
+
+        playBtn.addEventListener("click", () => {
+            music.play();
+            playBtn.style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>
